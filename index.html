@@ -26,43 +26,54 @@
     </div>
     <div class="bill-container">
       <div class="bill-form">
-        <label for="bill" class="label">Bill</label>
-        <input type="text" id="bill" class="input">
-        <label for="tip">Select Tip %</label>
-        <div class="tip-grid">
-          <div class="tip-item predefined-tip">5%</div>
-          <div class="tip-item predefined-tip">10%</div>
-          <div class="tip-item predefined-tip">15%</div>
-          <div class="tip-item predefined-tip">25%</div>
-          <div class="tip-item predefined-tip">50%</div>
-          <input class="tip-item custom">Custom</input>
+        <div class="bill-factor">
+          <label for="bill" class="label">Bill</label>
+          <input type="text" id="bill" class="input dollar" placeholder="0">
         </div>
-        <div class="input-labels">
-          <label for="number-of-people" class="label">Number of People</label>
-          <p class="error-message">Can't be zero</p>
+        <div class="bill-factor">
+          <label for="tip" class="label">Select Tip %</label>
+          <div class="tip-grid">
+            <div class="tip-item">5%</div>
+            <div class="tip-item">10%</div>
+            <div class="tip-item">15%</div>
+            <div class="tip-item">25%</div>
+            <div class="tip-item">50%</div>
+            <input class="tip-item custom-tip input" placeholder="Custom"></input>
+          </div>
         </div>
-        <input type="text" id="number-of-people" class="input">
+        <div class="bill-factor">
+          <div class="input-labels">
+            <label for="number-of-people" class="label">Number of People</label>
+            <p class="error-message">Can't be zero</p>
+          </div>
+          <input type="text" id="number-of-people" class="input person" placeholder="0">
+        </div>
       </div>
       <div class="bill-display">
-        <div class="display-item">
-          <div class="display-info">
-            <span class="item">Tip Amount</span>
-            <span class="quantiy-measure">/ person</span>
+        <div class="display-items">
+          <div class="display-item">
+            <div class="display-info">
+              <span class="item">Tip Amount</span>
+              <span class="quantity-measure">/ person</span>
+            </div>
+            <div class="value">4.27$</div>
           </div>
-          <div class="value">0$</div>
+          <div class="display-item">
+            <div class="display-info">
+              <span class="item">Total</span>
+              <span class="quantity-measure">/ person</span>
+            </div>
+            <div class="value">32.79$</div>
+          </div>
         </div>
-        <div class="display-item">
-          <span class="item">Total</span>
-          <span class="quantity-measure">/ person</span>
-        </div>
-        <button class="btn">Reset</button>
+        <button class="btn">RESET</button>
       </div>
     </div>
   </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Alexandru736/tip-calculator-app">Alex Ionita</a>.
   </footer>
 
   <script src="js/main.js"></script>
