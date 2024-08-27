@@ -91,3 +91,23 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset

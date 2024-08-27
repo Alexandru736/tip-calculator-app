@@ -13,4 +13,204 @@ html {
 body {
   height: calc(100vh - 1px);
   background-color: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body main .title {
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.4rem;
+}
+body main .bill-container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+}
+body main .bill-container .bill-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body main .bill-container .bill-form .bill-factor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+body main .bill-container .bill-form .bill-factor .label {
+  font-size: 0.6rem;
+  color: hsl(184, 14%, 56%);
+}
+body main .bill-container .bill-form .bill-factor .input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 0;
+  text-align: end;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: inherit;
+  color: hsl(183, 100%, 15%);
+  background-position: 20px;
+  background-repeat: no-repeat;
+}
+body main .bill-container .bill-form .bill-factor .input::-moz-placeholder {
+  color: hsl(185, 41%, 84%);
+}
+body main .bill-container .bill-form .bill-factor .input::placeholder {
+  color: hsl(185, 41%, 84%);
+}
+body main .bill-container .bill-form .bill-factor .input:focus {
+  outline: none;
+  border: 1px solid hsl(172, 67%, 45%);
+}
+body main .bill-container .bill-form .bill-factor .dollar {
+  background-image: url("../images/icon-dollar.svg");
+}
+body main .bill-container .bill-form .bill-factor .person {
+  background-image: url("../images/icon-person.svg");
+}
+body main .bill-container .bill-form .bill-factor .tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 50px);
+  gap: 0.8rem;
+}
+body main .bill-container .bill-form .bill-factor .tip-grid .tip-item {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .bill-container .bill-form .bill-factor .tip-grid .tip-item:where(:hover, :focus) {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+body main .bill-container .bill-form .bill-factor .tip-grid .custom-tip {
+  text-align: end;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 0.5rem;
+  width: 100%;
+}
+body main .bill-container .bill-form .bill-factor .tip-grid .custom-tip::-moz-placeholder {
+  color: hsl(184, 14%, 56%);
+}
+body main .bill-container .bill-form .bill-factor .tip-grid .custom-tip::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+body main .bill-container .bill-form .bill-factor .input-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+body main .bill-container .bill-form .bill-factor .input-labels .error-message {
+  font-size: 0.6rem;
+  color: red;
+  display: none;
+}
+body main .bill-container .bill-form .bill-factor .input-labels .error-message [aria-hidden=false] {
+  display: block;
+}
+body main .bill-display {
+  background-color: hsl(183, 100%, 15%);
+  padding: 1rem;
+  padding-top: 1.8rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: space-between;
+}
+body main .bill-display .display-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body main .bill-display .display-items .display-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .bill-display .display-items .display-item .display-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+}
+body main .bill-display .display-items .display-item .display-info .item {
+  color: hsl(189, 41%, 97%);
+}
+body main .bill-display .display-items .display-item .display-info .quantity-measure {
+  color: hsl(184, 14%, 56%);
+}
+body main .bill-display .display-items .display-item .value {
+  font-size: 1.3rem;
+  color: hsl(172, 67%, 45%);
+}
+body main .bill-display .btn {
+  border: 0;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+body main .bill-display .btn:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+body footer {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  body main {
+    margin-top: 7%;
+    justify-content: center;
+  }
+  body main .bill-container {
+    flex-direction: row;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 3rem 0.2px hsl(184, 14%, 56%);
+  }
+  body main .bill-container .bill-form {
+    flex: 1 0 0;
+  }
+  body main .bill-container .bill-form .bill-factor .tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  body main .bill-container .bill-form .bill-factor .tip-grid .tip-item {
+    padding: 0.25rem;
+  }
+  body main .bill-container .bill-form .bill-factor .tip-grid .custom-tip {
+    text-align: center;
+  }
+  body main .bill-container .bill-display {
+    flex: 1 0 0;
+  }
+  body footer {
+    display: block;
+  }
 }/*# sourceMappingURL=styles.css.map */
