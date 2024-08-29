@@ -33,20 +33,20 @@
         <div class="bill-factor">
           <label for="tip" class="label">Select Tip %</label>
           <div class="tip-grid">
-            <div class="tip-item">5%</div>
-            <div class="tip-item">10%</div>
-            <div class="tip-item">15%</div>
-            <div class="tip-item">25%</div>
-            <div class="tip-item">50%</div>
+            <div class="tip-item tip-button">5%</div>
+            <div class="tip-item tip-button">10%</div>
+            <div class="tip-item tip-button">15%</div>
+            <div class="tip-item tip-button">25%</div>
+            <div class="tip-item tip-button">50%</div>
             <input class="tip-item custom-tip input" placeholder="Custom"></input>
           </div>
         </div>
         <div class="bill-factor">
           <div class="input-labels">
             <label for="number-of-people" class="label">Number of People</label>
-            <p class="error-message">Can't be zero</p>
+            <p class="error-message" aria-hidden="true">Can't be zero</p>
           </div>
-          <input type="text" id="number-of-people" class="input person" placeholder="0">
+          <input type="text" id="number-of-people" class="input person" placeholder="0" aria-hidden="true">
         </div>
       </div>
       <div class="bill-display">
@@ -56,14 +56,14 @@
               <span class="item">Tip Amount</span>
               <span class="quantity-measure">/ person</span>
             </div>
-            <div class="value">4.27$</div>
+            <div class="value tip-amount">4.27$</div>
           </div>
           <div class="display-item">
             <div class="display-info">
               <span class="item">Total</span>
               <span class="quantity-measure">/ person</span>
             </div>
-            <div class="value">32.79$</div>
+            <div class="value total-amount">32.79$</div>
           </div>
         </div>
         <button class="btn">RESET</button>
