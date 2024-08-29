@@ -84,6 +84,9 @@ body main .bill-container .bill-form .bill-factor .dollar {
 body main .bill-container .bill-form .bill-factor .person {
   background-image: url("../images/icon-person.svg");
 }
+body main .bill-container .bill-form .bill-factor .person[aria-hidden=false] {
+  border: 1px solid red;
+}
 body main .bill-container .bill-form .bill-factor .tip-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -98,7 +101,7 @@ body main .bill-container .bill-form .bill-factor .tip-grid .tip-item {
   justify-content: center;
   align-items: center;
 }
-body main .bill-container .bill-form .bill-factor .tip-grid .tip-item:where(:hover, :focus) {
+body main .bill-container .bill-form .bill-factor .tip-grid .tip-item:where(:hover, .selected) {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
@@ -128,7 +131,7 @@ body main .bill-container .bill-form .bill-factor .input-labels .error-message {
   color: red;
   display: none;
 }
-body main .bill-container .bill-form .bill-factor .input-labels .error-message [aria-hidden=false] {
+body main .bill-container .bill-form .bill-factor .input-labels [aria-hidden=false] {
   display: block;
 }
 body main .bill-display {
@@ -176,8 +179,11 @@ body main .bill-display .btn {
   padding: 0.3rem;
   border-radius: 5px;
 }
-body main .bill-display .btn:hover {
+body main .bill-display .btn:not(:disabled):hover {
   background-color: hsl(185, 41%, 84%);
+}
+body main .bill-display .btn:disabled {
+  opacity: 0.7;
 }
 body footer {
   display: none;
